@@ -1,0 +1,19 @@
+Equilibration input.
+ &cntrl
+  ! General parameters, I/O
+  imin   =   0, nstlim = 1000000, dt   = 0.001, cut   = 4.3,
+  ntpr   = 100, ntwx   =    100, ntwr =  1000, iwrap =    1,
+  ioutfm =   1,
+
+  ! Shake and PBC
+  ntb = 2, ntc = 2, ntf = 2,
+
+  ! Barostat
+  ntp = 1, pres0 =   1.0, taup  = 2.0,
+  
+  ! Thermostat
+  ntt = 3, temp0 = 300.0, tempi = 0.0, gamma_ln = 5,
+ /
+ &lio
+ /
+
