@@ -1,7 +1,7 @@
 #!/bin/bash
 
 source ~/Programs/amber18/amber.sh
-res="MSE"
+res="MES"
 
 # source leaprc.ff14SB for amber < 16. 
 # If not, source leaprc.protein.ff14SB
