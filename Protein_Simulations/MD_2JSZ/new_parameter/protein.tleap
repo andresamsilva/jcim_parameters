@@ -1,0 +1,16 @@
+source leaprc.protein.ff14SB
+      source leaprc.water.tip3p
+      addAtomTypes{ {"SY" "S" "sp3" } }
+      loadamberparams CY2.frcmod
+      loadoff CY2.off
+      protein = loadpdb 2jsz_final.pdb
+      bond protein.60.C protein.61.N
+      bond protein.59.C protein.60.N
+      saveAmberParm protein 2jsz.prmtop 2jsz.rst7
+      savepdb protein 2jsz.pdb
+      addIons protein Na+ 9
+      solvateOct protein TIP3PBOX 10.0
+      addIonsRand protein Na+ 14 Cl- 14
+      saveamberparm protein 2jsz_np.prmtop 2jsz_np.rst7
+      savepdb protein 2jsz_np.pdb
+      quit
